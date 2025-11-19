@@ -3,6 +3,9 @@
 ## Description
 A framework for caputuring and querying provenance data that is cloud and database vendor agnostic,  supporting both semantic and property graphs.
 
+### Architecture Diagram
+![](https://github.com/Prov-Framework/.github/blob/f6379d1afb0a8a987141ef12064f2e256f455a92/prov_framework_architecture.png)
+
 ### Why PROV-O?
 Regardless of technology, the provenance ontology (https://www.w3.org/TR/prov-o/) provides a useful set of terms and diagrams to facilitate communication and data structure. 
 
@@ -14,8 +17,3 @@ Engineers already have plently of tools to query and visualize graph databases, 
 
 ### Why Give the Agent/LLM DB Access?
 By allowing the agent to query using a graph language instead of having it interact with a predefined REST or GraphQL API, the agent will be able to answer a larger variety of questions. The agent will be provided the provenance ontology, which will help it build more successful queries. The MCP servers will enforce any needed constraints to include verifying queries are read only and have reasonable limits.
-
-### Architecture Diagram
-![](https://github.com/Prov-Framework/.github/blob/f6379d1afb0a8a987141ef12064f2e256f455a92/prov_framework_architecture.png)
-
-
