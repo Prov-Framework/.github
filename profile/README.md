@@ -10,6 +10,6 @@ Often times forces out of our control dictate database vendors. This project aim
 The goal of this project is to provide a jumping off point for developers to choose which database language they need, include the corresponding database driver jar, and build their own docker images. While forking and customizing is encouraged, customizing around a single graph language or database driver will begin to deviate from the original goal of this project (being able to switch).
 
 ### Architecture Diagram
-![](https://github.com/Prov-Framework/.github/blob/9464f6fba5fc9cbcb4350c079e9839d11c4b7775/prov_framework_architecture.png)
+![](https://github.com/Prov-Framework/.github/blob/f6379d1afb0a8a987141ef12064f2e256f455a92/prov_framework_architecture.png)
 
 
