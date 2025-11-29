@@ -4,7 +4,7 @@
 A framework for caputuring and querying provenance data.
 
 ### Architecture Diagram
-![](https://github.com/Prov-Framework/.github/blob/f6379d1afb0a8a987141ef12064f2e256f455a92/prov_framework_architecture.png)
+![](https://github.com/Prov-Framework/.github/blob/3c3d860ff81864d2492d64a55c271194f0b03076/prov_framework_architecture.png)
 
 ### Why PROV-O?
 Naming things is one of the two hard problems in computer science. Regardless of technology, the provenance ontology (https://www.w3.org/TR/prov-o/) provides a useful set of terms and diagrams to facilitate communication and data structure. Using an existing and already agreed upon set of terms avoids re-hashing time consuming discussions that have already taken place in the W3C. 
