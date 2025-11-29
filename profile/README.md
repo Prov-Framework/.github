@@ -1,22 +1,16 @@
 # Provenance Framework
 
 ## Description
-A framework for caputuring and querying provenance data that is cloud and database vendor agnostic,  supporting both semantic and property graphs.
+A framework for caputuring and querying provenance data.
 
 ### Architecture Diagram
 ![](https://github.com/Prov-Framework/.github/blob/f6379d1afb0a8a987141ef12064f2e256f455a92/prov_framework_architecture.png)
 
 ### Why PROV-O?
-Regardless of technology, the provenance ontology (https://www.w3.org/TR/prov-o/) provides a useful set of terms and diagrams to facilitate communication and data structure. 
+Naming things is one of the two hard problems in computer science. Regardless of technology, the provenance ontology (https://www.w3.org/TR/prov-o/) provides a useful set of terms and diagrams to facilitate communication and data structure. Using an existing and already agreed upon set of terms avoids re-hashing time consuming discussions that have already taken place in the W3C. 
 
-### Why BFO?
-Aligning with BFO can provide benefits ranging from interoperability to political goodwill. More information can be found in the github repo (https://github.com/BFO-Mappings/PROV-to-BFO?tab=readme-ov-file).
+### Why GQL?
+Graph Query Language (GQL) has been formalized as the second data base language after SQL to become an ISO standard (https://www.iso.org/standard/76120.html) in 2024. Major players in the graph and cloud space are making moves to embrace the standard, to include Neo4j, Amazon, Microsoft, and Google. This is an indication of where industry is going, which will hopefully future proof this project. Many graph query languages existed before GQL, such as openCypher, Gremlin, SPARQL, AQL, PGQL, and GSQL. For this project, embracing a single standard means not having to support multiple languages, which means less long term maintenance effort to keep libraries up to date.
 
-### Why Support Both Property and Semantic Graphs?
-Often times forces out of our control dictate database and or cloud vendors. This project aims to jump start a team's data provenance journey by providing a provenance implementation in each of the major graph languages, SPARQL, Gremlin, and OpenCypher. Choose the docker images you need or fork the repos for a custom solution.
-
-### Why Use an Agent/LLM based UI?
-Engineers already have plently of tools to query and visualize graph databases, there is no reason to create another. End users typically won't know graph languages, so instead they can use any spoken or written lanugages that large language models support to query the graph. UIs are typically very custom to a customers needs, so this can serve as a starting point or easy way to provide a demo when pitching work. 
-
-### Why Give the Agent/LLM DB Access Instead of API Access?
-By allowing the agent to query using a graph language instead of having it interact with a predefined REST or GraphQL API, the agent will be able to answer a larger variety of questions. The agent will be provided the provenance ontology, which will help it build more successful queries. The MCP servers will enforce any needed constraints to include verifying queries are read only and have reasonable limits.
+### Why not RDF and SPARQL?
+Rule based reasoning and globally unique identifiers are not needed for this project. PROV-O is the only ontology being used, so prefixing class and predicate names to differentiate from terms in other ontologies is not required. Data processing speed is important. SPARQL endpoints typically support http REST POST calls, where as most GQL endpoints support the bolt protocol. The bolt protocol transfers data as binary and is stateful, where-as REST calls transfer plain text and are stateless. Binary is more compact, thus more effecient than transmitting plain text. Stateful connections keep the connection open for many back and forth communications, avoiding the overhead of establishing a connection and authenticating for every call to the database. RDF4J does support the application/x-binary-rdf type, but not all semantic graph knowledge bases support binary. Lastly, popularity is important if you find yourself in positions where larger corporate forces control database vendor selection. When looking at indicators like docker hub downloads, property graphs have much higher adoption rates than semantic graphs.       
