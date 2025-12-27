@@ -4,7 +4,7 @@
 A framework for caputuring and querying provenance data using a variety of graph technologies.
 
 ## Architecture Diagram
-![](https://github.com/Prov-Framework/.github/blob/8e3818ebb8016392bfc62c50219ff4edbd0a4b9e/prov_framework_architecture.png)
+![](https://github.com/Prov-Framework/.github/blob/23bc579811c146b729bd42f7c434151845a38b60/prov_framework_architecture.png)
 
 ## Scope (Intended Use Case)
 This is a starting point not a finished product. This is a deliberate choice.
