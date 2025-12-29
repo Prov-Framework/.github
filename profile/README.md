@@ -12,8 +12,8 @@ This is a starting point not a finished product. This is a deliberate choice.
 Closed source products often lead to problems when an organization has existing cloud or database licenses, internal authentication services, or hardened docker images that they require teams to utilize. This project prioritizes flexiblity, stopping short of those final productizing decisions because integration points to existing organizational systems and processes are where the most customization is needed. 
 
 ### Steps to start using the framework
-1) Clone the repo.
-2) Remove the graph libraries you don't need. If you are using Neo4j, no need to keep Apache Tinkerpop or Jena. More software libraries means more security vulnerabilities and code maintenance. 
+1) Fork/Clone the repo.
+2) Remove the graph libraries you don't need. If you are using Neo4j, no need to keep Apache Tinkerpop. More software libraries means more security vulnerabilities and code maintenance. 
 3) Configure authentication specific to the database you are using. For example, connecting to AWS Neptune might require AWS IAM configuration, or your organization may have custom internal authentication services.
 4) Choose and build a docker container that meets your needs. Different organizations have different security requirements, and may have internally hardened images they prefer to use.
 
